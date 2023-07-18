@@ -47,7 +47,7 @@ settings:
     channelHangTime: 3000
   defaultID: id1
 radioIDs:
-  - dmr: {id: id1, name: KD9KNI, number: 3185627}
+  - dmr: {id: id1, name: CHANGE_ME, number: CHANGE_ME}
 contacts:
   - dmr: {id: cont1, name: Parrot, ring: false, type: PrivateCall, number: 9990}
   - dmr: {id: cont2, name: SWMO, ring: false, type: GroupCall, number: 31291}
