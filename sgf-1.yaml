@@ -1,0 +1,510 @@
+---
+version: 0.11.3
+settings:
+  introLine1: KD9KNI
+  introLine2: DMR
+  micLevel: 5
+  speech: false
+  power: High
+  squelch: 1
+  vox: 3
+  tot: 0
+  tyt:
+    monitorType: Open
+    allLEDsDisabled: false
+    talkPermitToneDigital: true
+    talkPermitToneAnalog: false
+    passwordAndLock: false
+    channelFreeIndicationTone: false
+    allTonesDisabled: false
+    powerSaveMode: true
+    wakeupPreamble: true
+    bootPicture: true
+    channelMode: true
+    channelModeA: true
+    channelModeB: true
+    txPreambleDuration: 600
+    groupCallHangTime: 3000
+    privateCallHangTime: 4000
+    lowBatteryWarnInterval: 120
+    callAlertToneContinuous: true
+    callAlertToneDuration: 0
+    loneWorkerResponseTime: 1
+    loneWorkerReminderTime: 10
+    digitalScanHangTime: 1000
+    analogScanHangTime: 1000
+    backlightAlwaysOn: false
+    backlightDuration: 10
+    keypadLockManual: true
+    keypadLockTime: 1275
+    powerOnPasswordEnabled: false
+    powerOnPassword: 0
+    radioProgPasswordEnabled: true
+    radioProgPassword: 6524
+    pcProgPassword: ""
+    privateCallMatch: true
+    groupCallMatch: false
+    channelHangTime: 3000
+  defaultID: id1
+radioIDs:
+  - dmr: {id: id1, name: KD9KNI, number: 3185627}
+contacts:
+  - dmr: {id: cont1, name: Parrot, ring: false, type: PrivateCall, number: 9990}
+  - dmr: {id: cont2, name: SWMO, ring: false, type: GroupCall, number: 31291}
+  - dmr: {id: cont3, name: Branson Area, ring: false, type: GroupCall, number: 31293}
+  - dmr: {id: cont4, name: MARS, ring: false, type: GroupCall, number: 31686}
+  - dmr: {id: cont5, name: SWMO Skywarn, ring: false, type: GroupCall, number: 31297}
+  - dmr: {id: cont6, name: BYRG (KC), ring: false, type: GroupCall, number: 31201}
+  - dmr: {id: cont7, name: MO Cent, ring: false, type: GroupCall, number: 31296}
+  - dmr: {id: cont8, name: MO Lakes, ring: false, type: GroupCall, number: 3180}
+  - dmr: {id: cont9, name: MO Statewide, ring: false, type: GroupCall, number: 3129}
+  - dmr: {id: cont10, name: STL Metro, ring: false, type: GroupCall, number: 31292}
+  - dmr: {id: cont11, name: Midwest USA, ring: false, type: GroupCall, number: 3169}
+  - dmr: {id: cont12, name: Reddit, ring: false, type: GroupCall, number: 98003}
+  - dmr: {id: cont13, name: NW Arkansas, ring: false, type: GroupCall, number: 31055}
+  - dmr: {id: cont14, name: Local 2, ring: false, type: GroupCall, number: 2}
+  - dmr: {id: cont15, name: Local 9, ring: false, type: GroupCall, number: 9}
+  - dmr: {id: cont16, name: Cluster 8, ring: false, type: GroupCall, number: 8}
+  - dmr: {id: cont17, name: Midwest, ring: false, type: GroupCall, number: 3169}
+  - dmr: {id: cont18, name: WW English, ring: false, type: GroupCall, number: 13}
+  - dmr: {id: cont19, name: APRS, ring: false, type: PrivateCall, number: 310999}
+  - dmr: {id: cont20, name: IL Statewide, ring: false, type: GroupCall, number: 3117}
+  - dmr: {id: cont21, name: Chicago, ring: false, type: GroupCall, number: 311720}
+  - dmr: {id: cont22, name: Chi Loop, ring: false, type: GroupCall, number: 311731}
+  - dmr: {id: cont23, name: Rockford, ring: false, type: GroupCall, number: 311766}
+  - dmr: {id: cont24, name: RKFD NN9P, ring: false, type: GroupCall, number: 311741}
+  - dmr: {id: cont25, name: Jeff W0AV, ring: false, type: PrivateCall, number: 3129422}
+  - dmr: {id: cont26, name: IllinoisLink, ring: false, type: GroupCall, number: 31171}
+  - dmr: {id: cont27, name: Brad S, ring: false, type: PrivateCall, number: 3121642}
+groupLists:
+  - {id: grp1, name: NXA SLOT1, contacts: [cont2, cont5, cont9]}
+  - {id: grp2, name: NXA SLOT2, contacts: [cont6]}
+  - {id: grp3, name: Bolivar SLOT1, contacts: [cont2, cont5, cont8, cont9]}
+  - {id: grp4, name: Bolivar SLOT2, contacts: [cont6, cont13]}
+  - {id: grp5, name: K0NXA UHF1, contacts: [cont2, cont5]}
+  - {id: grp6, name: K0NXA UHF2, contacts: [cont6]}
+  - {id: grp7, name: W0PM, contacts: [cont14, cont11]}
+channels:
+  - digital:
+      id: ch1
+      name: NXA2m 1
+      rxFrequency: 146.685
+      txFrequency: 146.08500000000001
+      rxOnly: false
+      scanListRef: scan1
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 1
+      admit: ColorCode
+      colorCode: 5
+      timeSlot: TS1
+      radioId: !<!default> ""
+      groupList: grp1
+      contact: cont2
+      aprs: aprs1
+      power: High
+      timeout: 0
+      vox: 0
+  - digital:
+      id: ch2
+      name: NXA2m 2
+      rxFrequency: 146.685
+      txFrequency: 146.08500000000001
+      rxOnly: false
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 1
+      admit: ColorCode
+      colorCode: 5
+      timeSlot: TS2
+      radioId: !<!default> ""
+      groupList: grp2
+      contact: cont19
+      aprs: aprs1
+      power: High
+      timeout: 0
+      vox: 0
+  - digital:
+      id: ch3
+      name: Bolivar 1
+      rxFrequency: 145.28999999999999
+      txFrequency: 144.69
+      rxOnly: false
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 1
+      admit: ColorCode
+      colorCode: 5
+      timeSlot: TS1
+      radioId: !<!default> ""
+      groupList: grp3
+      contact: cont9
+      power: High
+      timeout: 0
+      vox: 0
+  - digital:
+      id: ch4
+      name: Bolivar 2
+      rxFrequency: 145.28999999999999
+      txFrequency: 144.69
+      rxOnly: false
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 1
+      admit: ColorCode
+      colorCode: 5
+      timeSlot: TS2
+      radioId: !<!default> ""
+      groupList: grp4
+      contact: cont1
+      power: Low
+      timeout: 0
+      vox: 0
+  - digital:
+      id: ch5
+      name: NXA UHF1
+      rxFrequency: 443.39999999999998
+      txFrequency: 448.39999999999998
+      rxOnly: false
+      scanListRef: scan1
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 1
+      admit: ColorCode
+      colorCode: 5
+      timeSlot: TS1
+      radioId: !<!default> ""
+      groupList: grp5
+      contact: cont2
+      aprs: aprs1
+      power: High
+      timeout: 0
+      vox: 0
+  - digital:
+      id: ch6
+      name: NXA UHF2
+      rxFrequency: 443.39999999999998
+      txFrequency: 448.39999999999998
+      rxOnly: false
+      scanListRef: scan1
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 1
+      admit: ColorCode
+      colorCode: 5
+      timeSlot: TS2
+      radioId: !<!default> ""
+      groupList: grp6
+      contact: cont6
+      aprs: aprs1
+      power: High
+      timeout: 0
+      vox: 0
+  - digital:
+      id: ch7
+      name: W0PM
+      rxFrequency: 442.35700000000003
+      txFrequency: 449.67500000000001
+      rxOnly: false
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 1
+      admit: ColorCode
+      colorCode: 1
+      timeSlot: TS1
+      radioId: !<!default> ""
+      groupList: grp7
+      contact: cont17
+      power: High
+      timeout: 0
+      vox: 0
+  - digital:
+      id: ch8
+      name: APRS
+      rxFrequency: 146.685
+      txFrequency: 146.08500000000001
+      rxOnly: false
+      tyt:
+        loneWorker: false
+        autoScan: false
+        talkaround: true
+        dataCallConfirmed: false
+        privateCallConfirmed: false
+        emergencyAlarmConfirmed: false
+        displayPTTId: true
+        rxRefFrequency: Low
+        txRefFrequency: Low
+        tightSquelch: false
+        compressedUDPHeader: false
+        reverseBurst: true
+        killTone: Off
+        inCallCriterion: Always
+        allowInterrupt: false
+        dcdm: false
+        dcdmLeader: false
+        dmrSquelch: 0
+      admit: Always
+      colorCode: 5
+      timeSlot: TS2
+      radioId: !<!default> ""
+      groupList: grp2
+      contact: cont19
+      aprs: aprs1
+      power: High
+      timeout: 60
+      vox: 0
+  - analog:
+      id: ch9
+      name: W0PM-A
+      rxFrequency: 147.22499999999999
+      txFrequency: 147.82499999999999
+      rxOnly: false
+      scanListRef: scan3
+      admit: Free
+      bandwidth: Wide
+      power: !<!default> ""
+      timeout: !<!default> ""
+      vox: !<!default> ""
+      rxTone: {ctcss: 162.199997}
+      txTone: {ctcss: 162.199997}
+      squelch: !<!default> ""
+  - analog:
+      id: ch10
+      name: W0EBE
+      rxFrequency: 146.91
+      txFrequency: 146.31
+      rxOnly: false
+      scanListRef: scan3
+      admit: Always
+      bandwidth: Wide
+      power: !<!default> ""
+      timeout: !<!default> ""
+      vox: !<!default> ""
+      rxTone: {ctcss: 162.199997}
+      txTone: {ctcss: 162.199997}
+      squelch: !<!default> ""
+  - analog:
+      id: ch11
+      name: N0NWS
+      rxFrequency: 145.49000000000001
+      txFrequency: 144.88999999999999
+      rxOnly: false
+      scanListRef: scan3
+      admit: Free
+      bandwidth: Wide
+      power: !<!default> ""
+      timeout: !<!default> ""
+      vox: !<!default> ""
+      rxTone: {ctcss: 136.5}
+      txTone: {ctcss: 136.5}
+      squelch: !<!default> ""
+zones:
+  - id: zone1
+    name: NXA 2m
+    A: [ch1]
+    B: [ch2]
+  - id: zone2
+    name: Bolivar
+    A: [ch3]
+    B: [ch4]
+  - id: zone3
+    name: NXA 70cm
+    A: [ch5]
+    B: [ch6]
+  - id: zone4
+    name: KG0PE
+    A: [ch7]
+    B: []
+  - id: zone5
+    name: SWMO
+    A: [ch5, ch6]
+    B: [ch7]
+  - id: zone6
+    name: Analog
+    A: [ch9, ch10]
+    B: [ch11]
+scanLists:
+  - id: scan1
+    name: SW
+    primary: ch1
+    secondary: ch7
+    channels: [!<!selected> "", ch7, ch1, ch2]
+  - id: scan2
+    name: NXA-U
+    primary: ch5
+    secondary: ch6
+    channels: []
+  - id: scan3
+    name: Analog
+    primary: ch9
+    secondary: ch11
+    channels: [ch10]
+positioning:
+  - dmr:
+      id: aprs1
+      name: GPS System
+      period: 120
+      contact: cont5
+  - dmr:
+      id: aprs2
+      name: APRS-DMR
+      period: 60
+      contact: cont19
+commercial:
+  encryptionKeys:
+    []
+tytExtension:
+  buttonSettings:
+    sideButton1Short: PowerSelect
+    sideButton1Long: OneTouch1
+    sideButton2Short: MonitorToggle
+    sideButton2Long: ScanToggle
+    sideButton3Short: Disabled
+    sideButton3Long: Disabled
+    progButton1Short: Disabled
+    progButton1Long: Disabled
+    progButton2Short: Disabled
+    progButton2Long: Disabled
+    longPressDuration: 1000
+  menuSettings:
+    hangtimeIsInfinite: false
+    hangTime: 10
+    textMessage: true
+    callAlert: true
+    contactEditing: true
+    manualDial: true
+    remoteRadioCheck: true
+    remoteMonitor: true
+    remoteRadioEnable: true
+    remoteRadioDisable: true
+    scan: true
+    scanListEditing: true
+    callLogMissed: true
+    callLogAnswered: true
+    callLogOutgoing: true
+    talkaround: true
+    alertTone: true
+    power: true
+    backlight: true
+    bootScreen: true
+    keypadLock: true
+    ledIndicator: true
+    squelch: true
+    vox: true
+    password: true
+    displayMode: true
+    radioProgramming: true
+    gpsInformation: true
+...
