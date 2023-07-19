@@ -40,7 +40,7 @@ settings:
     powerOnPasswordEnabled: false
     powerOnPassword: 0
     radioProgPasswordEnabled: true
-    radioProgPassword: 6524
+    radioProgPassword: CHANGE_ME
     pcProgPassword: ""
     privateCallMatch: true
     groupCallMatch: false
@@ -73,9 +73,7 @@ contacts:
   - dmr: {id: cont22, name: Chi Loop, ring: false, type: GroupCall, number: 311731}
   - dmr: {id: cont23, name: Rockford, ring: false, type: GroupCall, number: 311766}
   - dmr: {id: cont24, name: RKFD NN9P, ring: false, type: GroupCall, number: 311741}
-  - dmr: {id: cont25, name: Jeff W0AV, ring: false, type: PrivateCall, number: 3129422}
-  - dmr: {id: cont26, name: IllinoisLink, ring: false, type: GroupCall, number: 31171}
-  - dmr: {id: cont27, name: Brad S, ring: false, type: PrivateCall, number: 3121642}
+  - dmr: {id: cont25, name: IllinoisLink, ring: false, type: GroupCall, number: 31171}
 groupLists:
   - {id: grp1, name: NXA SLOT1, contacts: [cont2, cont5, cont9]}
   - {id: grp2, name: NXA SLOT2, contacts: [cont6]}
